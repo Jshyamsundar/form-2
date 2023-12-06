@@ -14,12 +14,14 @@ const pass = document.getElementById("pass");
 const cpass = document.getElementById("cpass");
 var a=0;
 var b;
+var result=[]
+var cbox=document.getElementsByName("check")
 
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
 
-    if(a>=9){
+    if(a==9){
     display()
     }
     else{
@@ -30,7 +32,7 @@ form.addEventListener('submit', e => {
 });
 function checkInputs() {
     const stunameVal = stuname.value.trim();
-    const dateVal = date.value.trim();
+    // const dateVal = date.value.trim();
     // const genderVal = gender.value.trim();
     // const qualificationVal = qualification.value.trim();
     const mobileVal = mobile.value.trim();
@@ -134,6 +136,13 @@ function checkInputs() {
         setSuccess(address);
     }
 
+    for(i=0;i<cbox.length;i++){
+    if(cbox[i].checked){
+        result.push(cbox[i].value)
+    }
+}
+
+console.log(result.value);
 
 }
 function setError(element, message) {
@@ -158,30 +167,20 @@ function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 display = ()=>{
-    document.write(stuname.value)
-    document.write('<br>')
-    document.write(date.value)
-    document.write('<br>')
-    document.write(mobile.value)
-    document.write('<br>')
-    document.write(father.value)
-    document.write('<br>')
-    document.write(mother.value)
-    document.write('<br>')
-    document.write(pmobile.value)
-    document.write('<br>')
-    document.write(address.value)
-    document.write('<br>')
-    document.write(email.value)
-    document.write('<br>')
-    document.write(pass.value)
-    document.write('<br>')
-    document.write(cpass.value)
-    document.write('<br>')
-    document.write(qualification.value)
-    document.write('<br>')
-    document.write('b')
-
+    document.write(stuname.value,"<br>")
+    document.write(date.value,"<br>")
+    document.write(b,"<br>")
+    document.write(qualification.value,"<br>")
+    document.write(result.join(','),"<br>")
+    document.write(country.value,",<br>")
+    document.write(mobile.value,"<br>")
+    document.write(father.value,"<br>")
+    document.write(mother.value,"<br>")
+    document.write(pmobile.value,"<br>")
+    document.write(address.value,"<br>")
+    document.write(email.value,"<br>")
+    document.write(pass.value,"<br>")
+    document.write(cpass.value,"<br>")
 
 
 }
