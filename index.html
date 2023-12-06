@@ -36,27 +36,28 @@
                 </div>
                 <div class="input-value">
                     <label for="qualification">qualification:</label>
-                    <select class="" style="margin-bottom: 10px;">
+                    <select class="" id="qualification" style="margin-bottom: 10px;">
                         <option value=""></option>
-                        <option value="1">MCA</option>
-                        <option value="2">MBA</option>
-                        <option value="2">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="M.Tech">M.Tech</option>
                     </select>
                     <div class="error"></div>
                 </div>
-                <label for="language" style="font-size: 20px; color: white;">Language Known Us:</label>
-                <div class="form-check" style="font-size: 20px; color: white; margin-top: 8px;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                        style="margin-top: 10px;">
-                    <label class="form-check-label" for="flexCheckDefault">Tamil</label>
-
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                        style="margin-top: 10px;">
-                    <label class="form-check-label" for="flexCheckChecked">English</label>
+                <div class="form-check " id="box" style="font-size: 20px; color: white; margin-top: 8px;">
+                    <label for="language" style="font-size: 20px; color: white;">Language Known Us:</label><br>
+                    <div class="input">
+                        <input class="form-check-input" type="checkbox" name="check" value="Tamil" id="flexCheckDefault"
+                            style="margin-top: 10px;">
+                        <label class="form-check-label" for="flexCheckDefault">Tamil</label>
+                        <input class="form-check-input" type="checkbox" name="check" value="English"
+                            id="flexCheckChecked" style="margin-top: 10px;">
+                        <label class="form-check-label" for="flexCheckChecked">English</label>
+                    </div>
                 </div>
+
                 <div class="input-value">
                     <label for="country">Country:</label>
-
                     <select id="country" name="country" class="form-control">
                         <option value=""></option>
                         <option value="Afghanistan">Afghanistan</option>
@@ -318,12 +319,16 @@
                 </div>
 
                 <div class="input-value">
-                    <label for="mobile">parents or guardient name:</label>
-                    <label for="mobile">father name:</label>
+
+                    <label for="father">father name:</label>
                     <input type="text" id="father">
-                    <label for="mobile">mother name:</label>
+                    <div class="error"></div>
+                </div>
+                <div class="input-value">
+                    <label for="mother">mother name:</label>
                     <input type="text" id="mother">
                     <div class="error"></div>
+
                 </div>
 
                 <div class="input-value">
