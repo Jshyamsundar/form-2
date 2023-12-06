@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Roboto:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    background-attachment: fixed;
+
+}
+
+#simpleform {
+    width: 400px;
+    margin: 2vh auto 0 auto;
+    background-color:darkcyan;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 28px 36px -18px inset;
+    background-attachment: fixed;
+    padding: 40px;
+    border-radius: 0px 120px 0px 0px;
+}
+
+.formContainer h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bolder;
+    color: palevioletred;
+    margin-bottom: 10px;
+}
+
+.input-value {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.input-value label {
+    text-transform: capitalize;
+    margin: 5px 0px;
+    font-size: 20px;
+    color:white;
+    /* color: magenta; */
+}
+
+.input-value input {
+    width: 100%;
+    outline: none;
+    height: 30px;
+}
+
+.formContainer .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+
+#btn-1 {
+    background-color: red;
+    color: white;
+}
+
+.input-value.success input {
+    visibility: visible;
+    border-color:  2px  solid green;
+    border: 2px solid green;
+
+}
+.input-value.error input {
+    visibility: visible;
+    border-color:  2px  solid red;
+    border: 2px solid red;
+}
+
+.error{
+    color: red;
+    font-size: 20px;
+}
+
+
