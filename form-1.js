@@ -12,24 +12,28 @@ const address = document.getElementById("address");
 const email = document.getElementById("email");
 const pass = document.getElementById("pass");
 const cpass = document.getElementById("cpass");
-var a=0;
+var a = 0;
 var b;
-var result=[]
-var cbox=document.getElementsByName("check")
+var result = []
+var cbox = document.getElementsByName("check")
 
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
 
-    if(a==9){
-    display()
+    if (a == 9) {
+        display()
     }
-    else{
-        a=0
+    else {
+        a = 0
     }
-        
-
 });
+
+let inputValue = document.querySelectorAll("input")
+inputValue.forEach(input => {
+    input.addEventListener('input',checkInputs)
+});
+
 function checkInputs() {
     const stunameVal = stuname.value.trim();
     // const dateVal = date.value.trim();
@@ -40,7 +44,7 @@ function checkInputs() {
     const motherVal = mother.value.trim();
     const pmobileVal = pmobile.value.trim();
     const emailVal = email.value.trim();
-    const addressVal =address.value.trim();
+    const addressVal = address.value.trim();
     const passVal = pass.value.trim();
     const cpassVal = cpass.value.trim();
 
@@ -62,18 +66,18 @@ function checkInputs() {
     else {
         setSuccess(mobile);
     }
-    for(i=0;i<=gender.length;i++){
-        if(gender[i].checked){
-         b=gender[i].value;   
+    for (i = 0; i <= gender.length; i++) {
+        if (gender[i].checked) {
+            b = gender[i].value;
         }
-        else{
+        else {
             break;
             alert("gender was empty")
-        
+
         }
     }
-    
-    
+
+
     // parents name
     if (fatherVal === '') {
         setError(father, "please enter your father name");
@@ -136,13 +140,13 @@ function checkInputs() {
         setSuccess(address);
     }
 
-    for(i=0;i<cbox.length;i++){
-    if(cbox[i].checked){
-        result.push(cbox[i].value)
+    for (i = 0; i < cbox.length; i++) {
+        if (cbox[i].checked) {
+            result.push(cbox[i].value)
+        }
     }
-}
 
-console.log(result.value);
+    console.log(result.value);
 
 }
 function setError(element, message) {
@@ -155,7 +159,7 @@ function setError(element, message) {
 }
 
 function setSuccess(element) {
-    a+=1
+    a += 1
     const inputValue = element.parentElement;
     const errorElement = inputValue.querySelector('.error')
     errorElement.innerText = '';
@@ -166,21 +170,21 @@ function setSuccess(element) {
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-display = ()=>{
-    document.write(stuname.value,"<br>")
-    document.write(date.value,"<br>")
-    document.write(b,"<br>")
-    document.write(qualification.value,"<br>")
-    document.write(result.join(','),"<br>")
-    document.write(country.value,",<br>")
-    document.write(mobile.value,"<br>")
-    document.write(father.value,"<br>")
-    document.write(mother.value,"<br>")
-    document.write(pmobile.value,"<br>")
-    document.write(address.value,"<br>")
-    document.write(email.value,"<br>")
-    document.write(pass.value,"<br>")
-    document.write(cpass.value,"<br>")
+display = () => {
+    document.write(stuname.value, "<br>")
+    document.write(date.value, "<br>")
+    document.write(b, "<br>")
+    document.write(qualification.value, "<br>")
+    document.write(result.join(','), "<br>")
+    document.write(country.value, ",<br>")
+    document.write(mobile.value, "<br>")
+    document.write(father.value, "<br>")
+    document.write(mother.value, "<br>")
+    document.write(pmobile.value, "<br>")
+    document.write(address.value, "<br>")
+    document.write(email.value, "<br>")
+    document.write(pass.value, "<br>")
+    document.write(cpass.value, "<br>")
 
 
 }
@@ -194,9 +198,9 @@ function clear() {
     document.getElementById("email") = '';
     document.getElementById("pass") = '';
     document.getElementById("cpass") = '';
-    document.getElementById("father") ='';
-    document.getElementById("mother") ='';
-    document.getElementById("pmobile") ='';
-    document.getElementById("address")='';
+    document.getElementById("father") = '';
+    document.getElementById("mother") = '';
+    document.getElementById("pmobile") = '';
+    document.getElementById("address") = '';
 
 }
