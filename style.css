@@ -15,7 +15,7 @@ body {
 #simpleform {
     width: 400px;
     margin: 2vh auto 0 auto;
-    background-color:darkcyan;
+    background-color:midnightblue;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 28px 36px -18px inset;
     background-attachment: fixed;
     padding: 40px;
@@ -27,7 +27,7 @@ body {
     text-transform: capitalize;
     font-size: 40px;
     font-weight: bolder;
-    color: palevioletred;
+    color: orange;
     margin-bottom: 10px;
 }
 
@@ -85,6 +85,9 @@ button {
 .error{
     color: red;
     font-size: 20px;
+}
+.success input{
+    border: 2px solid greenyellow !important;
 }
 
 
